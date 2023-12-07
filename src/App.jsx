@@ -10,8 +10,9 @@ function App() {
 
   return (
     <>
-     {/* <Count/> */}
-     <Form/>
+     <Count/>
+     {/* <Form/> */}
+     
     </>
   )
 }
