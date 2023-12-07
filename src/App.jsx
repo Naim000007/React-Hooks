@@ -4,15 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Count from './Component/Count'
 import Form from './Component/Form'
+import Clearup from './Component/Clearup'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-     <Count/>
+     {/* <Count/> */}
      {/* <Form/> */}
-     
+     <Clearup/>
+
     </>
   )
 }
