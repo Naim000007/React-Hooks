@@ -5,6 +5,7 @@ import './App.css'
 import Count from './Component/Count'
 import Form from './Component/Form'
 import Clearup from './Component/Clearup'
+import Child from './Component/Child'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
      {/* <Count/> */}
      {/* <Form/> */}
      <Clearup/>
+     <Child></Child>
 
     </>
   )

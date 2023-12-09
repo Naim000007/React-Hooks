@@ -21,3 +21,9 @@ for example :
 1.useEffect(()=>{})                  --> Runs every render
 2.useEffect(()=>{},[])               --> Runs only on first time
 3.useEffect(()=>{},[props, state])   --> Runs first render nd any time any dependency value change 
+
+
+  ------------------------------>Context Api<------------------------------
+
+  Context Api we use USECONTEXT hook 
+  useContext we have a Provider and Consumer in buit so Provider provied data and Consumer get the data 
