@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-// import { useContext } from 'react'
 import { AppContext } from './useContext/UserContex'
 
 function Child() {
@@ -11,4 +10,4 @@ function Child() {
   )
 }
 
-export default Child
+export default Child;

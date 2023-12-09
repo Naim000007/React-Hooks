@@ -26,4 +26,56 @@ for example :
   ------------------------------>Context Api<------------------------------
 
   Context Api we use USECONTEXT hook 
-  useContext we have a Provider and Consumer in buit so Provider provied data and Consumer get the data 
+  useContext we have a Provider and Consumer in buit so Provider provied data and Consumer get the data .
+  1. Import createContext from 'react'.
+  2. Create a context by calling createContext(). In your case, it's named AppContext.
+  3.Create a provider component (AppProvider) that wraps its children with AppContext.Provider. The provider component takes a value prop, which is the data you want to share through the context. In your case, it's an object with the properties name and age.
+  4. Export both the AppContext and AppProvider.
+   
+
+  Make a context api first  make this
+
+------------------------------------------------------------------------------
+  
+  import { createContext } from "react";
+
+const AppContext = createContext();
+
+const AppProvider = ({ children }) => {
+    const data = {
+        name: 'naim',
+        age: '23'
+    };
+
+    return (
+        <AppContext.Provider value={data}>
+            {children}
+        </AppContext.Provider>
+    );
+};
+
+export { AppContext, AppProvider };
+----------------------------------------------------------------------------------------------
+When use this USECONTEXT
+than 
+1. import useContext and Context provider file 
+2. const data = useContext(AppContext) Uses the useContext hook to get the current context value from AppContext. The data variable now contains the values provided by the context.
+3. Then render the jsx file 
+
+----------------------------------------------------------------------------------------------
+import React, { useContext } from 'react';
+import { AppContext } from './useContext/UserContex';
+
+function Child() {
+    // Using the useContext hook to access data from AppContext
+    const data = useContext(AppContext);
+
+    return (
+        <div>
+            <h1>Hi my name is {data.name} and my age is {data.age}</h1>
+        </div>
+    );
+}
+
+export default Child;
+-------------------------------------------------------------------------------------------

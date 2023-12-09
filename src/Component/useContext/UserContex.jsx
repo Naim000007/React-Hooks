@@ -1,14 +1,13 @@
 import { createContext } from "react";
-
 const AppContext = createContext();
 
 const AppProvider = ({children})=>{
     const data = {
         name: 'naim',
-        age: '23'
+        age: 22
     }
-    return <AppContext.Provider value={data}
-    >{children}</AppContext.Provider>
+    return<AppContext.Provider value={data}>
+        {children}
+    </AppContext.Provider>
 }
-
-export {AppContext, AppProvider}
+export { AppContext, AppProvider };
